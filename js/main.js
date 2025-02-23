@@ -57,6 +57,7 @@ function showCode(index) {
             } else if (event.type === "swipeleft") {
                 showCode(index - 1);
             }
+            event.preventDefault()
     })
     displayPane.empty()
     displayPane.append(d)
