@@ -1,0 +1,24 @@
+html {
+    background-color: black;
+}
+h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+#displayPane .code{
+    box-sizing: border-box;
+    padding: 4%;
+    width: 95vw;
+    height: 75vh;
+    margin: 0 auto;
+}
+
+.code canvas {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
