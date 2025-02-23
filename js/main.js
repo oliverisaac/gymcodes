@@ -34,6 +34,7 @@ function displayCodes() {
 }
 
 function showCode(index) {
+    index = Math.abs(index)
     index = index % codes.length
     console.debug("showing code", index)
     let code=codes[index]
