@@ -1,6 +1,7 @@
 let codes = []
 function main() {
     let searchParams = new URLSearchParams(window.location.search)
+    let startIndex = searchParams.get("start") || 0
     codes = [ searchParams.get("codes") ]
     .flatMap((v) => v.split("\n"))
     .flatMap((v) => v.split(","))
@@ -13,7 +14,7 @@ function main() {
     if (codes.length == 0 ) {
         showInputField()
     } else {
-        displayCodes()
+        displayCodes(startIndex)
     }
 }
 
@@ -26,11 +27,11 @@ function showInputField() {
     inputPane.show()
 }
 
-function displayCodes() {
+function displayCodes(startIndex) {
     console.debug("going to display codes")
     inputPane.hide()
     displayPane.show()
-    showCode(0)
+    showCode(startIndex)
 }
 
 function showCode(index) {
