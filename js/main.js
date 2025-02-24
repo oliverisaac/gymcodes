@@ -1,7 +1,13 @@
 let codes = []
 function main() {
+    let startIndex = 1 * (window.location.hash.replaceAll("#", ""))
+    console.debug("startindex", startIndex)
+    if (!startIndex || typeof startIndex !== "number") {
+        console.debug("startindex not a number", startIndex)
+        startIndex = 0
+    }
+
     let searchParams = new URLSearchParams(window.location.search)
-    let startIndex = searchParams.get("start") || 0
     codes = [ searchParams.get("codes") ]
     .flatMap((v) => v.split("\n"))
     .flatMap((v) => v.split(","))
@@ -63,7 +69,8 @@ function showCode(index) {
     })
     displayPane.empty()
     displayPane.append(d)
-}
 
+    window.location.hash = index
+}
 
 main()
