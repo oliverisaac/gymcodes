@@ -6,12 +6,42 @@ h1 a {
     color: white;
 }
 
+#inputPane {
+    color: white;
+}
+
+.fieldContainer {
+    margin-bottom: 2em;
+    border-radius: 10px;
+    border: solid 1px white;
+    padding: 1em;
+}
+
+.fieldContainer > * {
+    box-sizing: border-box;
+    display: block;
+}
+
+.fieldContainer label {
+    margin-top:1em;
+}
+
+.fieldContainer label:first-of-type {
+    margin-top: 0;
+}
+
+.deleteButton {
+    color: darkred;
+    margin-top: 1em;
+}
+
 #displayPane .code{
     box-sizing: border-box;
     padding: 4%;
     width: 95vw;
     height: 70vh;
     margin: 0 auto;
+    margin-bottom: 5em;
 }
 
 .code canvas {
@@ -21,4 +51,5 @@ h1 a {
     width: 95%;
     height: 100%;
     margin: 0 auto;
+    color: black;
 }

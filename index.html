@@ -9,16 +9,14 @@
 </head>
 <body>
     <h1><a href='./index.html'>GymCodes</a></h1>
+    <div id='displayPane'>
+    </div>
     <div id='inputPane'>
-        <form method="get">
-            <textarea name="codes" width=20 height=5 placeholder="Enter gym barcode, one per line..."></textarea>
-            <br/>
+        <form method="get" onSubmit="processForm(event)">
+            <button id='addBarcode' onClick='clickAddBarcode(event)'>Add New Barcode</button><br/>
             <input type='submit'/>
         </form>
     </div>
-    <div id='displayPane'>
-    </div>
-
     <!-- Your website content here -->
     <script src="js/jquery.min.js"></script> 
     <script src="js/hammer.min.js"></script> 
